@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Register | Run to Rave 2026 | Gym & Juice by MTC</title>
+<meta name="description" content="Register for Run to Rave 2026 — 28 December, Kaduna. Personal details, race info, emergency contact and medical information.">
+<link rel="canonical" href="https://runtorave.vercel.app/register">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;800;900&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#08050f;--ink2:#120b22;--line:rgba(255,255,255,.12);--txt:#f3eefc;--mute:#a99fc0;--pink:#ff2e93;--cyan:#27e6ff;--sun:#ffb02e;--d:'Unbounded','Arial Black',sans-serif;--b:'Space Grotesk',system-ui,sans-serif;color-scheme:dark}
+*{box-sizing:border-box;margin:0;padding:0}
+html{background:var(--ink)}
+body{font-family:var(--b);color:var(--txt);line-height:1.5;background:
+ radial-gradient(60rem 40rem at 85% -10%,rgba(255,46,147,.18),transparent 60%),
+ radial-gradient(50rem 35rem at -10% 30%,rgba(39,230,255,.12),transparent 60%),var(--ink);min-height:100vh}
+.wrap{max-width:720px;margin:0 auto;padding:24px 20px 90px}
+header.top{display:flex;justify-content:space-between;align-items:center;padding:18px 0 6px}
+.brand{font-family:var(--d);font-weight:800;font-size:1rem;color:var(--txt);text-decoration:none;letter-spacing:.04em}
+.brand small{display:block;font:500 .62rem var(--b);color:var(--mute);letter-spacing:.08em}
+a.btn{display:inline-flex;align-items:center;gap:.5em;font:700 .95rem var(--b);color:#0b0614;background:linear-gradient(90deg,var(--pink),var(--sun));padding:.75em 1.5em;border-radius:999px;text-decoration:none;border:0;cursor:pointer}
+a.btn.ghost{background:none;color:var(--txt);border:1px solid var(--line)}
+h1{font-family:var(--d);font-weight:900;font-size:clamp(1.5rem,6vw,2.3rem);line-height:1.1;margin:26px 0 8px;text-transform:uppercase}
+h1 em{font-style:normal;color:var(--pink)}
+.sub{color:var(--mute);margin-bottom:28px}
+fieldset{border:0;margin:0 0 14px}
+legend{font-family:var(--d);font-weight:800;font-size:.95rem;text-transform:uppercase;letter-spacing:.04em;padding:14px 0 10px;display:flex;align-items:center;gap:.6em;width:100%}
+legend i{font-style:normal;background:linear-gradient(135deg,var(--pink),var(--cyan));-webkit-background-clip:text;background-clip:text;color:transparent;font-size:1.1em}
+.box{background:rgba(255,255,255,.03);border:1px solid var(--line);border-radius:16px;padding:16px;display:grid;gap:12px}
+label{font-size:.85rem;color:var(--mute);display:grid;gap:6px}
+label b{color:var(--txt);font-weight:500}
+input[type=text],input[type=email],input[type=tel],input[type=date],select,textarea{background:#0d0819;border:1px solid var(--line);border-radius:10px;color:var(--txt);font:500 1rem var(--b);padding:.7em .9em;width:100%}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--cyan);outline-offset:1px}
+textarea{min-height:80px;resize:vertical}
+.two{display:grid;gap:12px}
+@media(min-width:560px){.two{grid-template-columns:1fr 1fr}}
+.opts{display:flex;flex-wrap:wrap;gap:8px}
+.opts label{grid-auto-flow:row}
+.chip{display:inline-flex;align-items:center;gap:.5em;border:1px solid var(--line);border-radius:999px;padding:.5em 1em;font-size:.9rem;color:var(--txt);cursor:pointer;user-select:none}
+.chip input{accent-color:var(--pink);margin:0}
+.chip:has(input:checked){border-color:var(--pink);background:rgba(255,46,147,.12)}
+.decl{display:grid;gap:10px}
+.decl label{display:flex;gap:.7em;align-items:flex-start;color:var(--txt);font-size:.92rem;cursor:pointer}
+.decl input{margin-top:4px;accent-color:var(--pink)}
+.submit{position:fixed;left:0;right:0;bottom:0;background:linear-gradient(180deg,transparent,rgba(8,5,15,.92) 30%);padding:18px 20px 22px;text-align:center}
+.submit button{width:100%;max-width:480px;font-family:var(--d);font-weight:800;font-size:1rem;text-transform:uppercase;letter-spacing:.03em;color:#0b0614;background:linear-gradient(90deg,var(--pink),var(--sun));border:0;border-radius:999px;padding:1em;cursor:pointer}
+.submit button:disabled{opacity:.5;cursor:not-allowed}
+.err{color:var(--sun);font-size:.85rem;min-height:1.2em;text-align:center;margin-top:8px}
+#done{display:none;text-align:center;padding:40px 0 20px}
+#done h2{font-family:var(--d);font-weight:900;font-size:1.6rem;text-transform:uppercase;margin-bottom:10px}
+#done .ok{font-size:3rem}
+#done p{color:var(--mute);margin:8px 0 20px}
+footer{color:var(--mute);font-size:.8rem;text-align:center;padding:30px 20px}
+footer a{color:var(--cyan);text-decoration:none}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+<a class="brand" href="/">RUN TO RAVE<small>Gym &amp; Juice by MTC</small></a>
+<a class="btn ghost" href="/">Back to site</a>
+</header>
+
+<form id="reg" novalidate>
+<h1>Race <em>Registration</em></h1>
+<p class="sub">Run to Rave 2026 · Monday, 28 December · Kaduna. Fields marked * are required.</p>
+
+<fieldset><legend><i>01</i> Personal information</legend>
+<div class="box">
+<label><b>Full name (as it should appear on your race bib) *</b><input type="text" name="full_name" required autocomplete="name"></label>
+<div class="two">
+<label><b>Date of birth *</b><input type="date" name="dob" required></label>
+<label><b>Gender *</b><select name="gender" required><option value="">Select…</option><option>Male</option><option>Female</option><option>Prefer not to say</option></select></label>
+</div>
+<div class="two">
+<label><b>Nationality *</b><input type="text" name="nationality" required placeholder="Nigerian"></label>
+<label><b>State of residence *</b><input type="text" name="state" required placeholder="Kaduna"></label>
+</div>
+<div class="two">
+<label><b>City of residence *</b><input type="text" name="city" required></label>
+<label><b>Occupation (optional)</b><input type="text" name="occupation"></label>
+</div>
+<label><b>Residential address *</b><input type="text" name="address" required></label>
+<div class="two">
+<label><b>Phone number *</b><input type="tel" name="phone" required placeholder="0803 000 0000"></label>
+<label><b>WhatsApp number *</b><input type="tel" name="whatsapp" required></label>
+</div>
+<label><b>Email address *</b><input type="email" name="email" required autocomplete="email"></label>
+</div>
+</fieldset>
+
+<fieldset><legend><i>02</i> Race registration</legend>
+<div class="box">
+<div><b>Have you participated in a road race before? *</b>
+<div class="opts"><label class="chip"><input type="radio" name="prior_race" value="Yes" required>Yes</label><label class="chip"><input type="radio" name="prior_race" value="No">No</label></div></div>
+<div><b>How frequently do you run or walk for fitness? *</b>
+<div class="opts"><label class="chip"><input type="radio" name="frequency" value="Regularly" required>Regularly</label><label class="chip"><input type="radio" name="frequency" value="Occasionally">Occasionally</label><label class="chip"><input type="radio" name="frequency" value="Rarely">Rarely</label><label class="chip"><input type="radio" name="frequency" value="First time participating">First time</label></div></div>
+<label><b>Running club or fitness community (if applicable)</b><input type="text" name="club"></label>
+<div><b>T-shirt size *</b>
+<div class="opts"><label class="chip"><input type="radio" name="tshirt" value="XS" required>XS</label><label class="chip"><input type="radio" name="tshirt" value="S">S</label><label class="chip"><input type="radio" name="tshirt" value="M">M</label><label class="chip"><input type="radio" name="tshirt" value="L">L</label><label class="chip"><input type="radio" name="tshirt" value="XL">XL</label><label class="chip"><input type="radio" name="tshirt" value="XXL">XXL</label><label class="chip"><input type="radio" name="tshirt" value="XXXL">XXXL</label></div></div>
+</div>
+</fieldset>
+
+<fieldset><legend><i>03</i> Emergency contact</legend>
+<div class="box">
+<label><b>Full name of emergency contact *</b><input type="text" name="ec_name" required></label>
+<div class="two">
+<label><b>Relationship to participant *</b><input type="text" name="ec_relation" required placeholder="e.g. Sister, Friend"></label>
+<label><b>Emergency contact phone number *</b><input type="tel" name="ec_phone" required></label>
+</div>
+<label><b>Alternative emergency contact number</b><input type="tel" name="ec_phone2"></label>
+</div>
+</fieldset>
+
+<fieldset><legend><i>04</i> Medical and safety information</legend>
+<div class="box">
+<div><b>Do you have any medical condition the organisers or medical team should be aware of? *</b>
+<div class="opts"><label class="chip"><input type="radio" name="medical" value="Yes" required>Yes</label><label class="chip"><input type="radio" name="medical" value="No">No</label></div></div>
+<label><b>If yes, please provide details</b><textarea name="medical_details"></textarea></label>
+<div><b>Do you have any known allergies? *</b>
+<div class="opts"><label class="chip"><input type="radio" name="allergies" value="Yes" required>Yes</label><label class="chip"><input type="radio" name="allergies" value="No">No</label></div></div>
+<label><b>If yes, please specify</b><textarea name="allergy_details"></textarea></label>
+<div><b>Are you currently taking any medication that may be relevant during physical activity? *</b>
+<div class="opts"><label class="chip"><input type="radio" name="medication" value="Yes" required>Yes</label><label class="chip"><input type="radio" name="medication" value="No">No</label></div></div>
+<div><b>Have you been advised by a medical professional to avoid strenuous physical activity? *</b>
+<div class="opts"><label class="chip"><input type="radio" name="advised_avoid" value="Yes" required>Yes</label><label class="chip"><input type="radio" name="advised_avoid" value="No">No</label></div></div>
+<label><b>Any additional information you would like the medical team to know?</b><textarea name="medical_notes"></textarea></label>
+</div>
+</fieldset>
+
+<fieldset><legend><i>05</i> Event experience</legend>
+<div class="box">
+<div><b>Are you interested in joining the Gym &amp; Juice by MTC community? *</b>
+<div class="opts"><label class="chip"><input type="radio" name="join_community" value="Yes" required>Yes</label><label class="chip"><input type="radio" name="join_community" value="No">No</label></div></div>
+<div><b>Would you like to receive updates about future MTC events? *</b>
+<div class="opts"><label class="chip"><input type="radio" name="updates" value="Yes" required>Yes</label><label class="chip"><input type="radio" name="updates" value="No">No</label></div></div>
+</div>
+</fieldset>
+
+<fieldset><legend><i>06</i> Declaration and consent</legend>
+<div class="box decl">
+<label><input type="checkbox" name="c1" required> I confirm that the information provided is accurate.</label>
+<label><input type="checkbox" name="c2" required> I understand that participation in a physical race involves inherent risks and that I am responsible for ensuring that I am fit to participate.</label>
+<label><input type="checkbox" name="c3" required> I agree to follow the instructions of race officials, event marshals and medical personnel.</label>
+<label><input type="checkbox" name="c4" required> I understand that the organisers may use photographs and videos captured during the event for promotional and media purposes.</label>
+<label><input type="checkbox" name="c5" required> I agree to the event's participation terms, conditions and liability waiver.</label>
+<label><input type="checkbox" name="c6" required> I consent to the processing of my registration information for event administration and communication.</label>
+</div>
+</fieldset>
+
+<fieldset><legend><i>07</i> Get early access to Fleexi</legend>
+<div class="box">
+<div><b>Something exciting is coming! Would you like to join the Fleexi early access waitlist?</b>
+<div class="opts">
+<label class="chip"><input type="radio" name="fleexi" value="Yes, sign me up!" required>Yes, sign me up!</label>
+<label class="chip"><input type="radio" name="fleexi" value="I'd like to know more first.">Tell me more first</label>
+<label class="chip"><input type="radio" name="fleexi" value="Not at the moment.">Not at the moment</label>
+</div></div>
+</div>
+</fieldset>
+</form>
+
+<div id="done">
+<div class="ok">🎉</div>
+<h2>You're registered!</h2>
+<p>Your spot is reserved. Complete your payment to lock it in.</p>
+<a class="btn" id="payBtn" href="#">Pay now — Run &amp; Rave ₦10,000</a>
+<p style="margin-top:16px"><a class="btn ghost" id="waBtn" href="#" target="_blank" rel="noopener">Send my details on WhatsApp</a></p>
+<p style="font-size:.8rem">Questions? Call MTC: 09099589351 · 08080641174</p>
+</div>
+
+<div class="submit" id="submitBar">
+<button type="submit" form="reg" id="go">Register for Run to Rave 2026</button>
+<div class="err" id="err"></div>
+</div>
+</div>
+<footer>Run to Rave 2026 · Gym &amp; Juice by MTC · <a href="https://www.menthatcook.live" target="_blank" rel="noopener">menthatcook.live</a></footer>
+<script>
+/* Payment link: paste the QwamPay Run & Rave link between the quotes. Until then, submit shows WhatsApp. */
+var PAY_URL="";
+var WA_NUMBER="2349099589351"; // MTC WhatsApp (09099589351)
+var f=document.getElementById('reg'),err=document.getElementById('err');
+f.addEventListener('submit',function(e){
+ e.preventDefault();err.textContent='';
+ if(!f.checkValidity()){
+  var bad=f.querySelector(':invalid');if(bad)bad.scrollIntoView({block:'center',behavior:'smooth'});
+  err.textContent='Please complete the required fields highlighted above.';return;
+ }
+ var d={};new FormData(f).forEach(function(v,k){d[k]=v});
+ d.registered_at=new Date().toISOString();d.ticket='run-rave';
+ try{var all=JSON.parse(localStorage.getItem('rtr_registrations')||'[]');all.push(d);localStorage.setItem('rtr_registrations',JSON.stringify(all))}catch(x){}
+ document.getElementById('submitBar').style.display='none';
+ f.style.display='none';document.getElementById('done').style.display='block';
+ window.scrollTo({top:0,behavior:'smooth'});
+ var msg='RUN TO RAVE 2026 REGISTRATION%0A%0AName: '+encodeURIComponent(d.full_name)+
+  '%0ADOB: '+encodeURIComponent(d.dob)+'%0AGender: '+encodeURIComponent(d.gender)+
+  '%0APhone: '+encodeURIComponent(d.phone)+'%0AEmail: '+encodeURIComponent(d.email)+
+  '%0ACity: '+encodeURIComponent(d.city)+', '+encodeURIComponent(d.state)+
+  '%0AT-shirt: '+encodeURIComponent(d.tshirt)+'%0AEmergency contact: '+encodeURIComponent(d.ec_name+' ('+d.ec_relation+') '+d.ec_phone)+
+  '%0AMedical condition: '+encodeURIComponent(d.medical+(d.medical==='Yes'?': '+d.medical_details:''))+
+  '%0AFleexi waitlist: '+encodeURIComponent(d.fleexi);
+ document.getElementById('waBtn').href='https://wa.me/'+WA_NUMBER+'?text='+msg;
+ var pay=document.getElementById('payBtn');
+ if(PAY_URL){pay.href=PAY_URL;pay.target='_blank';pay.rel='noopener'}
+ else{pay.onclick=function(ev){ev.preventDefault();window.open('https://wa.me/'+WA_NUMBER+'?text='+encodeURIComponent('Hi MTC! I just registered for Run to Rave 2026 ('+d.full_name+'). How do I complete my ₦10,000 Run & Rave payment?'),'_blank','noopener')}}
+});
+</script>
+</body>
+</html>
