@@ -30,6 +30,7 @@ export default async function handler(req, res) {
   const client = await pool.connect();
   try {
     await client.query(SQL);
+    await client.query('BEGIN');
     await client.query('LOCK TABLE rtr_registrations IN ACCESS EXCLUSIVE MODE');
     const used = (await client.query('SELECT bib FROM rtr_registrations WHERE bib IS NOT NULL')).rows.map(r => r.bib);
     const free = [];
@@ -39,6 +40,7 @@ export default async function handler(req, res) {
     const r = await client.query(
       'INSERT INTO rtr_registrations (bib,ticket_id,ticket_name,payment_status,fleexi_waitlist,submitted_at,data,label,email) VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9) RETURNING id',
       [bib, b.ticket || null, b.ticket_name || null, 'pending', fleexi, new Date(), JSON.stringify(data), JSON.stringify(labels), email]);
+    await client.query('COMMIT');
     try { await sendEmail(email, first, bib); } catch (e) { console.error('email failed', e.message); }
     return res.status(200).json({ ok: true, id: r.rows[0].id, bib });
   } catch (e) {
